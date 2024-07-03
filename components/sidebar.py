@@ -18,7 +18,7 @@ layout = dbc.Container([
         dbc.Container([
             dbc.Row([
                 dbc.Col([
-                    html.H1("SANTOS", style={'color': 'yellow'})#, 'font-size': 'width / 1.2'})
+                    html.H1("ASIMOV", style={'color': 'yellow'})#, 'font-size': 'width / 1.2'})
                 ])
             ]),
             dbc.Row([
