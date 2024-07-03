@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: adv_santos
+    env: python
+    buildCommand: ""
+    startCommand: gunicorn app:server
+    envVars:
+      - key: DASH_DEBUG
+        value: 'False'
+    plan: free
