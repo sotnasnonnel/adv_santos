@@ -3,6 +3,10 @@ from dash import html, dcc, Input, Output, State
 import dash_bootstrap_components as dbc
 import pandas as pd
 import sqlite3
+import logging
+
+# Configuração de logging
+logging.basicConfig(level=logging.DEBUG)
 
 from app import app
 from components import home, sidebar
@@ -50,6 +54,7 @@ app.layout = dbc.Container(children=[
 # Callbacks
 @app.callback(Output('page-content', 'children'), Input('url', 'pathname'))
 def render_page_content(pathname):
+    logging.debug(f"Rendering page for pathname: {pathname}")
     if pathname == '/home' or pathname == '/':
         return home.layout
     return dbc.Container([
